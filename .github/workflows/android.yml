@@ -19,11 +19,10 @@ jobs:
 
     - name: Build APK
       run: |
-        cd android-app
         ./gradlew assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v3
       with:
         name: HeartTouch
-        path: android-app/app/build/outputs/apk/debug/app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
