@@ -1,0 +1,33 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.hearttouch'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.hearttouch"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        permissions {
+            // الاهتزاز
+            usesPermission "android.permission.VIBRATE"
+            usesPermission "android.permission.FOREGROUND_SERVICE"
+            usesPermission "android.permission.INTERNET"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+}
