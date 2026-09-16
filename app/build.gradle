@@ -12,13 +12,6 @@ android {
         targetSdk 34
         versionCode 1
         versionName "1.0"
-
-        permissions {
-            // الاهتزاز
-            usesPermission "android.permission.VIBRATE"
-            usesPermission "android.permission.FOREGROUND_SERVICE"
-            usesPermission "android.permission.INTERNET"
-        }
     }
 
     buildTypes {
