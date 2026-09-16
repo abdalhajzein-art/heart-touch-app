@@ -19,5 +19,8 @@ else
     JAVA_EXE="java"
 fi
 
+# Build the classpath for Gradle 9 wrapper
+CLASSPATH="$APP_HOME/gradle/wrapper/gradle-wrapper-main-9.7.1.jar:$APP_HOME/gradle/wrapper/gradle-wrapper-shared-9.7.1.jar"
+
 # Execute Gradle
-exec "$JAVA_EXE" $DEFAULT_JVM_OPTS -cp "$APP_HOME/gradle/wrapper/gradle-wrapper.jar" org.gradle.wrapper.GradleWrapperMain "$@"
+exec "$JAVA_EXE" $DEFAULT_JVM_OPTS -classpath "$CLASSPATH" org.gradle.wrapper.GradleWrapperMain "$@"
